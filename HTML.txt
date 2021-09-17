@@ -1,0 +1,164 @@
+HTML入门
+	
+	HTML用来制作网页基础内容和基本结构
+	CSS：用来美化网页
+	JavaScript：用来制作网页动态效果
+	
+	
+	HTML 超文本标记语言
+	
+	HTML是由一系列的元素组成的，元素是由标签组成的
+	
+	标签<h1> 代表一级标题</h1>
+	属性：标签中可包含属性，只能添加到开始标签   格式：属性名=属性值（align = 'center'）
+	<h1 align = 'center'>一级标题</h1>
+	
+	
+	HTML基本语法
+	
+	注释       <!-注释的内容-->
+	开始标签 <h1>内容</h1>
+	自闭合标签<br/>换行标签    <hr/>分割线标签
+
+
+	<u>下划线标签</u>
+	标签的嵌套
+	<h1><u>文本</u></h1>
+	
+	块级元素和行内元素
+
+	块级元素：在页面以块的形式展现，自己独占一行，后面的内容自动换行<p><hr><div>
+	行内元素：不会换行<b><i><u><span>
+	div和span：用来布局页面
+	<div>一般用来对其他元素进行分组，用于样式化想换的需求
+	<span>一般用来编制元素以达到某种样式
+	
+	
+	属性   	属性名=属性值              属性值可以用引号建议双引号
+	class 	用来选择和访问特定的元素
+	id 	定义元素的唯一标识，在整个文档中必须是唯一的
+	name	定义元素的名称，一般用于表单数据提交到服务器
+	value	定义在元素内显示的默认值，一般常用于表单标签中
+	style	定义元素的css样式
+	
+	HTML特殊字符
+	原义字符		等价字符引用
+	<		&1t;
+	>		&gt;
+	"		&quot;
+	'		&apos;
+	空格		&nbsp;
+	&		&amp;
+	
+	案例分析
+	要想完成一个界面，首先设置页面布局，然后设置页面样式
+	1div样式布局
+		在<head>标签中通过<style>标签来控制样式
+				<style>
+				          标签名{
+					属性名1:属性值1;					
+
+
+					}
+				</style>	
+	
+	2文本标签
+		p		表示文本的一个段落
+		h		表示文档标题
+		hr（属性）	表示段落元素之间的主题切换，一般显示水平线    （size=“4”color="red"）
+		ul(属性)		表示一个无序列表，可含多个元素，无编号显示
+		ol（type start）	表示有序列表，通常渲染为带编号的列表
+		li		表示列表里的条目
+		em		表示文本斜体
+		i		斜体
+		strong		加粗
+		b		加粗
+		font		表示字体（已过时）
+
+	
+
+	什么叫浮动呢？
+	可以让每个div做到一个不同位置的显示的效果
+	可以通过给每个div标签加上class属性才可以控制div的样式
+
+		div   class属性float浮动（left，right，none）、clear清除浮动（both）、text-align文本对齐方式（left，center，right）、background背景色
+
+·	【图片标签img】
+	标签名img
+	作用：可以显示一张图片
+	属性：{【src】必须的属性，表示图片的地址【title】鼠标悬停（hover）时显示的文本【alt】图形不显示时的替换文本【height】图像的高度【width】图像的宽度}
+	          
+
+	【超链接标签】
+	标签名a		<a>文本</a>
+	作用：表示超链接
+	属性：{【href】表示超链接指向的URL地址（【target】页面的打开方式_self当前页_black新标签页）}
+	样式控制【text-decoration】去掉下划线【color】颜色
+	
+	a:hover{这是鼠标悬停时的控制}
+
+	【背景图片】
+		background:url("图片路径")	
+
+	【表单标签】
+	标签名form
+	作用：表示表单标签
+	属性：{[(action)用于提交数据的路径][(method)提交表单的方式（get【不安全】和post【安全】）][（autocomplete）是否记录补全（on和off）]}
+
+
+	<input>
+	<button>按钮名称</button>
+
+		【表单项标签】
+			lable	表单元素说明，配合表单项标签使用		for属性，属性值必须和表单项的id属性值一致
+
+			input	多种输入类型来接受用户数据			type属性，数据的类型
+									id属性，唯一标识
+									name属性，提交服务器的标识
+									value属性，默认数据值
+									placeholder属性，默认提示信息
+									required属性，是否必须有数据
+
+			button	按钮标签，不同的按钮有不同的作用		type属性，按钮的功能（submit，reset，button）
+
+		【表单项标签type属性值】
+			text		普通文本框
+			password		密码框
+			email		邮箱框，简单验证
+			radio		单选框			该属性必须有相同的name属性值，value属性设置实际提交的值，checked属性代表默认选中
+			checkbox		复选框			该属性必须有相同的name属性值，value属性设置实际提交的值，checked属性代表默认选中
+			date 		日期框
+			time  		时间框
+			datetime-local	时间日期框
+			number		数字框
+			range		滚动条数值框		min最小值max最大值step步进值
+			search		可清除文本框
+			tel		电话框
+			url		网址框
+			file		文件上传框
+			hidden		隐藏域			value属性设置实际提交的值
+			select		表示下拉列表标签		与input标签常见属性相似
+			optgroup		表示下拉列表分组标签	lable属性，设置分组名称
+			option		表示下拉列表项标签		
+			textarea		表示文本域标签		rows属性代表行数，cols属性代表列数
+		
+		
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
