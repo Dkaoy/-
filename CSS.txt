@@ -60,7 +60,7 @@ CSS入门
 		分组选择器	,		可以同时匹配多个元素	div,span,p{}
 
 
-	边框样式
+	【边框样式】
 		边框名称		作用		属性值
 		border		设置所有边框	
 		border-top	上边框		solid-实线
@@ -68,6 +68,84 @@ CSS入门
 		border-right	右边框		dotted-圆点
 		border-bottom	下边框		dashed-虚线
 		border-radius	设置边框弧度
+
+	【文本样式】
+		样式名称		作用		属性值
+		color		文本颜色		颜色单词（red）RGB值（#ff0000）
+		font-family 	字体		微软雅黑、宋体等
+		font-size		字体大小		像素点 20px
+		text-decoration	文字下划线	none:无；underline:下划线；overline:上划线；line-through:删除线
+		text-align 	水平对齐方式	left:居左；right:居右；center:居中
+		line:height	行间距		像素点20px	
+		vertical-align	垂直对齐方式	top:居上；bottom:居下；middle:居中；百分比调节
+
+
+
+	【表格标签】
+		标签名称		作用		属性
+		table		表格标签		width宽度；height高度；border边框；align对齐方式
+		tr		行标签		align对齐方式
+		td		单元格标签	rowspan合并行；colspan合并列
+		th		表头标签（加粗和居中）
+		thead		表头语义标签
+		tbody		表体语义标签
+		tfoot		表脚语义标签
+
+	【样式控制】
+		background-repeat		控制背景重复	no-repeat不重复；repeat-x水平重复；repeat-y垂直重复repeat水平+垂直重复
+		outline			控制轮廓		double双实线；dotted圆点；dashed虚线；none无
+		display			控制元素		inline内联元素（无换行，无长高）block块级元素（有换行）inline-block内联元素有长宽none隐藏元素		
+		
+		
+	【盒子模型】
+		通过设置边框和元素内容的边距，从而实现布局的方式。分为内边距的外边距两种方式！
+		外边距名称		作用		举例
+		margin-top		上外边距		margin-top:50px；
+		margin-left		左外边距		margin-left:50px；
+		margin-right		右外边距		margin-right:50px;
+		margin-bottom		下外边距		margin-bottom:50px;
+		margin			通用上下左右外边距	margin:50px；
+		margin			通用单独上右下左外边距	margin:50px 20px 30px 40px；
+		margin			自动计算外边距并水平居中	margin:auto；
+
+
+		内边距名称
+		padding
+		
+
+	【nginx】
+		是一款服务器软件
+		核心功能是可以和服务器硬件相结合，从而将程序发布到Nginx服务器上，从而让很多用户浏览
+		
+
+
+	nginx安装
+		
+	发布项目
+		1在/home下创建一个网站目录：madir mulu
+		2将项目上传到该目录下：put 本地目录
+		3解压项目压缩包：unzip web.zip
+		4编辑nginx配置文件:vi /home/nginx-1.177.5/conf/nginx.conf
+			找到server的大括号范围，修改location的路径
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
