@@ -137,6 +137,7 @@ Servlet
 
 
 
+
 【HTTP协议】
 【发布静态资源】
 HTML，CSS，JavaScript都属于静态资源
