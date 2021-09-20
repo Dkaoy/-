@@ -1,0 +1,144 @@
+【企业开发简介】
+	1JavaEE规范
+	13种技术规范
+	WEB
+	系统结构:
+		基础结构划分:CS结构；BS结构
+	技术选型：
+		Model1模型；MVC模型
+	部署方式划分：
+		一体式结构；垂直拆分结构；分布式结构；微服务结构；
+	
+
+	【CS结构】：客户端+服务器{更新维护比较麻烦}
+	【BS结构】：浏览器+服务器{更新方便}
+
+
+【Tomcat服务器】
+
+	常用的应用服务器
+	重量级服务器：weblogic；websphereAS;JBOSSAS
+	轻量级服务器：Tomcat；
+
+	tomcat.apache.org
+	【基本使用】
+	1启动bin目录下startup.    2关闭shutdown.
+	3部署项目：在webapps目录下创建一个文件夹，将资源放到该文件夹，启动tomcat，并配置正确访问路径
+
+	【idea集成tomcat】
+	1run中点击edit-configurations；2点击default->Tomcat Server->Local；3configure关联本地路径
+	
+	通过war包发布
+
+	【Tomcat配置文件】
+	主配置文件server.xml
+	
+	【Tomcat配置虚拟目录】
+	虚拟目录：可以发布任意目录下的项目
+	1编辑server.xml配置文件，找到<Host>标签
+	2加入以下内容
+		<Context path="/my(这是访问路径)" docBase="d:my（这是本地路径）"/>
+	
+	【Tomcat配置虚拟主机】
+	虚拟主机作用：可以访问指定路径的名称
+	1编辑server.xml配置文件，找到<Engine>标签
+	2加入以下内容
+		<Host name="www.webdemo.com" appBase="webapps"
+			unpackWARs="true" autoDeploy="true">
+		       <Context path="" docBase="wedemo"/>
+	3修改hosts文件
+		
+
+	【HTTP协议】
+		超文本传输协议
+		基于TCP/IP协议
+	
+	【HTTP协议的请求】
+		1请求的组成部分
+			①请求行
+			②请求头
+			③请求空行
+			④请求体
+		2请求方式
+			GET
+			POST
+			{只有POST方式有请求体}
+	
+	【HTTP协议的响应】
+		2响应的组成部分
+			①响应行
+			②响应头
+			③响应空行
+			④响应体
+
+
+
+	【发布静态资源】
+	【发布动态资源】
+		Servlet是运行在java服务端的程序，用于接收和响应来自客户端的基于HTTP协议的请求。
+		核心方法service();任何客户端的请求都会经过该方法
+	
+		servlet声明
+	<servlet>
+		<servlet-name>名称</servlet-name>
+		<servlet-class>路径</servlet-class>
+	</servlet>	
+
+	servlet映射
+	<servlet-mapping>
+		<servlet-name>和声明中的名称完全一样</servlet-name>
+		<url-pattern>（在url中访问的路径）/路径</url-pattern>
+	</servlet-mapping>				
+		
+
+Servlet	
+	实现接口或者继承实现类
+	Servlet接口	GenericServlet抽象类	HttpServlet抽象类		ServletConfig接口		ServletContext接口
+	
+·	执行过程
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+【HTTP协议】
+【发布静态资源】
+HTML，CSS，JavaScript都属于静态资源
+【发布动态资源】
+JSP，Servlet都属于动态资源
