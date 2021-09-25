@@ -139,13 +139,44 @@ Servlet
 	1声明ServletConfig
 	2通过init方法，来对ServletConfig对象进行赋值
 	3演示ServletConfig常用方法
+	（1）根据key获取config
+		String encodingValue = config.getInitParameter("encoding")
+		key.hasMoreElements()
+		key.nextElement()
+
+	(2)获取servlet的名称
+	config.getServletName();
+	
+	(3)获取servletContext对象
+	config.getServletContext();		
 	
 
 
+	ServletContext
+		应用上下文对象，每一个应用中只有一个ServletContext对象
+		作用：可以配置和获得应用的全局初始化参数，可以实现Servlet之间的数据共享
+		
+	域对象：指对象具有作用范围，可以实现数据的共享
+	
+	
 
+	ServletContext配置方式
+	在<web-app>标签中，通过<context-param>标签来配置，有两个子标签
+	<param-name>：代表全局初始化参数key
+	<param-value>：代表全局初始化参数value
 
+	
 
+	ServletContext常用方法
+	返回值		方法名				说明
+	String		getInitParamter(String name)		根据名称获取全局配置的参数
+	String		getContextPath()			获取当前应用的访问虚拟目录
+	String		getRealPath(String name)		根据虚拟目录获取应用部署的磁盘绝对路径
+	
 
+	void		setAttribute(String name,Object value)	向应用域对象中存储数据
+	Object		getAttribute(String name)		通过名称获取应用域对象中的数据
+	void		removeAttribute(String name)		通过名称移除应用域对象中的数据
 
 
 
