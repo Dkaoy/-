@@ -123,6 +123,22 @@ Servlet
 
 	servletConfig
 	是cervlet配置参数对象，为每一个servlet提供一些初始化配置
+	【配置方式】
+	在<servlet>标签中，通过<init-param>标签来配置，有两个子标签。
+	<param-name>：代表初始化参数的key
+	<param-value>：代表初始化参数的value
+
+	【常用方法】
+	返回值			方法名				说明
+	String			getInitParameter(String name)	根据参数名称获取参数的值
+	Enumeration<String>	getInitParameterName()		获取所有参数名称的枚举
+	String			getServletName()			获取Servlet的名称、
+	ServletContext		GETservletContext()			获取ServletContext对象
+	
+	
+	1声明ServletConfig
+	2通过init方法，来对ServletConfig对象进行赋值
+	3演示ServletConfig常用方法
 	
 
 
