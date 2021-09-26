@@ -228,14 +228,57 @@ Servlet
 			String[]			getParameterValues(String name)	根据名称获取所有数据
 			Enumeration<String>	getParameterNames()		获取所有名称
 			Map<String,String[]>	getParameterMap()			获取所有参数的键值对
+		获取请求参数并封装对象
+			1手动封装：逐个调用getParameter
+			2反射封装：调用getParameterMap()方式，for遍历，属性描述器PropertyDescriptor pd = new ;pd.getWriteMethod;执行方法，invoke();
+			3工具类封装:通过beanutils包，调用getParameterMap()方式，BeanUtils.populate();
 
-
-
-
-
-
-		响应对象
+		通过流对象获取请求信息（post方式才有）
+			BufferedReader		getReader()	获取字符输入流
+			ServletInputStream		getInputStream()	获取字节输入流
 	
+			
+	中文乱码问题
+	get方式没有乱码问题，post方式有问题，可以通过setCharacterEncoding()方法来解决
+	（在获取参数之前使用req.setCharacterEncoding()来解决中文乱码问题）
+	
+	请求域：可以在一次范围内进行数据共享
+		请求对象操作共享数据方法
+			void			setAttribute(String name,Object value)	向请求域对象中存储数据
+			Object			getAttribute(String name)		通过名称获取请求域对象中的数据
+			void			removeAttribute(String name)		通过名称移除请求域对象中的数据
+	
+	请求转发：客户端的请求到达之后，需要借助其他servlet来实现功能
+		特点：	浏览器地址栏不变
+			域对象中的数据不丢失
+			负责转发的servlet转发前后的响应正文会丢失
+			由转发的目的地来响应客户端
+		方法：
+			返回值			方法名				说明
+			RequestDispatcher		getRequestDispatcher(String name)	获取请求调度对象
+			void			forward(ServletRequest req,ServletResponse resp)		实现转发
+	
+	请求包含：可以合并其他servlet的功能一起响应给客户端
+		特点：	浏览器地址栏不变
+			域对象中的数据不丢失
+			被包含的servlet的响应头会丢失
+		方法：	
+			RequestDispatcher		getRequestDispatcher(String name)	获取请求调度对象
+			void			include(ServletRequest req,ServletResponse resp)		实现包含
+	
+
+
+
+	【响应对象】
+		常见状态码
+			200	成功
+			302	重定向
+			304	请求资源未改变，使用缓存
+			400	请求错误，常见于请求参数错误
+			404	请求资源未找到
+			405	请求方式不支持
+			500	服务器错误
+						
 	
 
 
