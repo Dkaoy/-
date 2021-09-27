@@ -363,9 +363,123 @@ Servlet
 
 
 
+	【COOKIE】和class文件一样
+		会话介绍：浏览器和服务器之间的多次请求和响应
+		cookie介绍：客户端会话管理技术，把要共享的数据保存到客户端，每次请求时，把会话信息带到服务器，从而实现多次请求的数据共享
+		cookie属性：
+			属性名		作用			是否重要
+			name		cookie名称		必须属性
+			value		cookie的值（不支持中文）	必须属性
+			path		cookie的路径		重要
+			domain		cookie域名		重要
+			maxAge		cookie的存活时间		重要
+			version		cookie版本号		不重要
+			comment		cookie的描述		不重要
 
+		cookie方法
+		方法名				作用
+		Cookie(String name,String value)	构建方法创建对象
+		属性对应的set和get方法		赋值和获取值
+	
+		cookie添加和获取
+		添加
+		void		addCookie(Cookie cookie)		向客户端添加Cookie			
+		
+		获取
+		Cookie[]		getCookies()			获取所有的Cookie
+		
+	【Cookie使用】
+		需求：通过cookie记录最后访问时间，并在浏览器上显示出来
+		实现步骤
+			1通过响应对象写出一个提示信息
+			2创建Cookie对象，指定name和value	
+			3设置Cookie最大存活时间
+			4通过响应对象将Cookie对象添加到客户端
+			5通过请求对象获取Cookie对象
+			6将Cookie对象中的访问时间写出
+		//        1通过响应对象写出一个提示信息
+		        resp.setContentType("text/html;charset=UTF-8");
+		        PrintWriter pw = resp.getWriter();
+		        pw.write("欢迎访问本网站，最后登录时间为：<br>");
+		
+		//        2创建Cookie对象，指定name和value
+		        Cookie cookie = new Cookie("time", System.currentTimeMillis() + "");
+		//        3设置Cookie最大存活时间
+		        cookie.setMaxAge(3600);
+		//        4通过响应对象将Cookie对象添加到客户端
+		        resp.addCookie(cookie);
+		//        5通过请求对象获取Cookie对象
+		        Cookie[] arr = req.getCookies();
+		        for (Cookie c : arr) {
+		            if ("time".equals(c.getName())) {
+		//                6将Cookie对象中的访问时间写出
+		                String value = c.getValue();
+		                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		                pw.write(sdf.format(new Date(Long.parseLong(value))));
+		            }
+		        }
 
+	【Cookie细节】
+		数量限制：每个网站最多只有20个cookie，且每个大小不超过4kb，所有网站cookie总数不超过300个
+		名称限制：只能包含ascci码表中的字母数字字符。不包含逗号，分号，空格，不能以$开头
+			值不支持中文
+		存活时间限制：setAge()方法接收到的数字
+				负整数：当前会话有效，浏览器关闭则清除
+				0：立即清除
+				正整数：以秒为单位设置存活时间
+		访问路径限制：取自第一次访问资源路径前缀，只要以前缀开头（包括子路径）都可以访问到
+			使用setPath()方法设置指定路径
+	
+	【Session】
+		httpsession：服务器端会话管理技术
+			本质也是采用客户端会话管理技术，只不过在客户端保存的是一个特殊标识，而共享的数据保存到了服务器端的内存对象中
+			每次请求时，会将特殊标识带到服务器端，根据标识来找到对应的内存空间，从而实现数据共享
+		作用：可以实现数据共享
+		
+		httpsession常用方法
+			void		setAttribute(String name,Object value)		设置共享数据
+			Object		getAttribute(String name)			获取共享数据
+			void		removeAttribute(String name)			移除共享数据
+			String		getId()					获取唯一标识符名称
+			void		Invalidate()				让session立即失效
+		
+			
+··		httpsession获取（通过HttpServletRequest对象来获取）
+			HttpSession	getSession()				获取HttpSession对象
+			HttpSession	getSession(boolean create)			获取HttpSession对象，未获取到是否自动创建
+			
+		HttpSession的使用
+			通过第一个servlet设置共享数据用户名，并在第二个servlet获取到
+			步骤
+			1在第一个servlet获取到请求的用户名信息
+			2获取httpSession对象
+			3将用户名设置到共享数据中
+			4在第二个servlet中获取httpsession对象
+			5获取共享数据用户名
+			6将获取到的用户名响应给客户端浏览器
+		//        获取请求的用户名
+		        String username = req.getParameter("username");
+		
+		//        2获取httpsession的对象
+		        HttpSession session = req.getSession();
+		//        3.将用户名添加到共享数据
+		        session.setAttribute("username",username);
+		    }
+		//        获取httpsession的对象
+		        HttpSession session = req.getSession();
+		//        2获取共享数据
+		        Object username = session.getAttribute("username");
+		//        3.将数据响应给浏览器
+		        resp.getWriter().write(username+"");
+		    }			
+			
 
+		httpsession细节
+		·唯一标识查看：请求消息头
+		·浏览器禁用cookie：	【url重写】：resp.encodeURL("全路径")；
+		·钝化和活化（服务器自动完成）
+			钝化：序列化，将长时间不用担还没有到期的httpsession进行序列化，写到磁盘上
+			活化：相反的状态
 
 
 
