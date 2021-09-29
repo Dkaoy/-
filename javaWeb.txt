@@ -481,24 +481,147 @@ Servlet
 			钝化：序列化，将长时间不用担还没有到期的httpsession进行序列化，写到磁盘上
 			活化：相反的状态
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			
+	JSP（java server pages）：是一种动态网页技术标准
+		部署在服务器上，处理客户发送的请求，并根据请求内容动态生成HTML、XML或其他格式文档的web网页，然后再响应给客户端
+		
+	jsp本质是servlet
+	
+	
 【HTTP协议】
 【发布静态资源】
 HTML，CSS，JavaScript都属于静态资源
 【发布动态资源】
 JSP，Servlet都属于动态资源
+
+	JSP案例
+		1创建一个web项目
+		2再web目录下创建一个index.jsp文件
+		3在文件中写一句内容：这是我的第一个JSP
+	
+	JSP执行过程
+		客户端浏览器	tomcat服务器	jsp_demo		index.jsp		index_jsp.java	index_jsp.class
+
+		             发起请求		
+				     解析请求地址
+				
+				                 找到具体应用	
+			
+						         找到jsp文件
+
+								        翻译jsp文件		
+		
+											编译java文件
+	
+
+						端户客给应响
+
+
+	JSP文件内容
+		
+	JSP语法
+		jsp注释
+			<%--注释的内容--%>
+		java代码块
+			<%JAVA代码%>
+		
+			<%
+   			 System.out.println("hello");	输出在控制台
+   			 out.print("hello");		输出在页面
+ 			 %>
+
+		jsp表达式
+			<%=表达式%>	相当于对输出在页面的简化
+		jsp声明
+			<%!声明变量或方法%>
+
+	如果有!代表成员变量，没有!代表局部变量
+	
+
+
+	JSP指令
+		page指令
+		<%@page 属性名=属性值 属性名=属性值%>
+			属性名		作用
+			contentType	响应正文支持的类型和设置编码格式
+			language		使用的语言，默认java		
+			errorPage		当前页面出现异常后跳转的页面
+			isErrorPage	是否抓住异常，如果为true则页面中就可以使用异常对象，默认是false
+			import		导包import="java.util.ArrayList"
+			session		是否创建HttpSession对象，默认是true
+			buffer		设定JspWriter输出jsp内容缓存的大小，默认8kb
+			pageEncoding	翻译jsp时所用的编码格式
+			isElgnored	是否忽略EL表达式，默认是false
+
+		include指令：可以包含其他页面
+		<%@include file=包含的页面%>
+
+		taglib指令：可以引入外部标签库
+		<%@taglib uri=标签库地址 prefix=前缀名称%>
+
+
+	JSP细节
+		九大隐式对象
+			隐式对象名称		代表实际对象
+			request			javax.servlet.http.HttpServletRequest
+			response			javax.servlet.http.HttpServletResponse
+			session			javax.servlet.http.HttpSession
+			application		javax.servlet.ServletContext
+			page			java.lang.Object
+			config			javax.servlet.ServletConfig
+			exception			java.lang.Throwable
+			out			javax.servlet.jsp.JspWriter
+			pageContext(JSP独有)	javax.servlet.jsp.PageContext
+
+	四大域对象
+	pagecontext：页面范围，只能在当前页使用，开发中用的很少
+	ServletRequest：请求范围，一次请求或当前请求转发用，请求转发后，再次转发时请求域丢失
+	HttpSession：会话范围，多次请求数据共享时使用，多次请求共享数据，但不同的客户端不能共享
+	ServletContext：应用范围，整个应用都可以使用，少用，除非对数据修改需要做同步处理
+
+
+	MVC模型
+		M(Model):模型。用于封装数据，封装的是数据模型
+		V(VIEW):视图。用于显示数据，动态资源用JSP页面，静态资源用HTML页面
+		C(controller):控制器。用于处理请求和响应，例如Servlet
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
