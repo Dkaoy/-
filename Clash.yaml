@@ -12835,3 +12835,6 @@ rules:
  - IP-CIDR,198.45.48.0/20,Global
  - IP-CIDR,207.45.72.0/22,Global
  - IP-CIDR,208.75.76.0/22,Global
+ - GEOIP,CN,Domestic
+
+ - MATCH,Global
