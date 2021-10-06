@@ -10,33 +10,6 @@ experimental:
   ignore-resolve-fail: true
 
 
-dns:
-  enable: true
-  ipv6: false
-  listen: 0.0.0.0:53
-  default-nameserver:
-    - 1.2.4.8
-    - 119.29.29.29
-    - 223.5.5.5
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-    - "*.lan"
-    - localhost.ptlogin2.qq.com
-  nameserver:
-    - 1.2.4.8
-    - 119.29.29.29
-    - 223.5.5.5
-  fallback:
-    - https://dns.adguard.com/dns-query
-    - https://dns.rubyfish.cn/dns-query
-    - https://cloudflare-dns.com/dns-query
-  fallback-filter:
-    geoip: true
-    ipcidr:
-      - 240.0.0.0/4
-
-
 proxies:
   - {name: 甲骨文2号->8080, server: 150.230.36.241, port: 8080, type: vmess, uuid: 5ad3927a-135d-4dc4-924a-70315893e633, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /JJkuv3, ws-headers: {Host: a.189.cn}}
   - {name: 甲骨文2号, server: 150.230.36.241, port: 1999, type: ss, cipher: aes-256-gcm, password: 9SGMTdc01r}
@@ -55,7 +28,7 @@ proxy-groups:
     proxies:
       - Domestic
       - Foreign
-      - DIRECT
+
   - name: "Domestic"
     type: select
     proxies:
