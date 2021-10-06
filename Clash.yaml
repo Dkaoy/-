@@ -1,0 +1,99 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+
+experimental:
+  ignore-resolve-fail: true
+
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 1.2.4.8
+    - 119.29.29.29
+    - 223.5.5.5
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - localhost.ptlogin2.qq.com
+  nameserver:
+    - 1.2.4.8
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - https://dns.adguard.com/dns-query
+    - https://dns.rubyfish.cn/dns-query
+    - https://cloudflare-dns.com/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+
+
+proxies: 
+  - {name: 甲骨文2号->8080, server: 150.230.36.241, port: 8080, type: vmess, uuid: 5ad3927a-135d-4dc4-924a-70315893e633, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /JJkuv3, ws-headers: {Host: a.189.cn}}
+  - {name: 甲骨文2号, server: 150.230.36.241, port: 1999, type: ss, cipher: aes-256-gcm, password: 9SGMTdc01r}
+  - {name: 甲骨文1号->8080, server: 155.248.198.94, port: 8080, type: vmess, uuid: 1a271bf9-e849-4cd8-d4f1-69f3bbfee945, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /JJkuv3, ws-headers: {Host: a.189.cn}}
+  - {name: 甲骨文1号, server: 155.248.198.94, port: 1999, type: ss, cipher: aes-256-gcm, password: 8kPkATBKoa}
+  - {name: 腾讯云->8080, server: 101.34.250.164, port: 8080, type: vmess, uuid: e838b792-298f-435a-aaca-706c3b0c8437, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /JJkuv3, ws-headers: {Host: a.189.cn}}
+  - {name: 阿里云->8080, server: 39.105.121.159, port: 8080, type: vmess, uuid: 0dbb5f8d-87a6-4daa-c036-e262d124c922, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /JJkuv3, ws-headers: {Host: a.189.cn}}
+  - {name: 🇺🇸 凤凰城->8080, server: 158.101.4.94, port: 8080, type: vmess, uuid: 655918f8-537a-41a5-a291-936cfb0d17b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /JJkuv3, ws-headers: {Host: a.189.cn}}
+  - {name: 🇺🇸 凤凰城2号arm->8080, server: 129.146.28.230, port: 8080, type: vmess, uuid: 18acd04d-1193-4d22-9965-2654bf1879d5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /JJkuv3, ws-headers: {Host: a.189.cn}}
+  - {name: 🇺🇸 凤凰城2号arm, server: 129.146.28.230, port: 1999, type: ss, cipher: aes-256-gcm, password: prmZl9ZHSD}
+
+
+proxy-groups:
+  - name: "Global"
+    type: select
+    proxies:
+      - Domestic
+      - Foreign
+      - DIRECT
+  - name: "Domestic"
+    type: select
+    proxies:
+      - DIRECT
+      - 腾讯云->8080
+      - 阿里云->8080
+  - name: "Foreign"
+    type: select
+    proxies:
+      - 甲骨文1号
+      - 甲骨文1号->8080
+      - 甲骨文2号
+      - 甲骨文2号->8080
+      - 🇺🇸 凤凰城->8080
+      - 🇺🇸 凤凰城2号arm
+      - 🇺🇸 凤凰城2号arm->8080
+  - name: "AdBlock"
+    type: select
+    proxies:
+      - REJECT
+      - Global
+      - Domestic
+      - Foreign
+
+
+
+rules:
+  - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list,AdBlock
+
+  - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Apple_CDN.list,Global
+  - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Apple_API.list,Global
+
+  - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/AsianMedia.list,Domestic
+  - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/GlobalMedia.list,Foreign
+
+  - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Domestic.list,Domestic
+  - RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Global.list,Global
+  
+  - GEOIP,CN,Domestic
+
+  - MATCH,Global
