@@ -23,7 +23,7 @@ proxies:
   - {name: 🇺🇸 凤凰城, server: 158.101.4.94, port: 1999, type: ss, cipher: aes-256-gcm, password: V2DtjO331O}
   - {name: 甲骨文2号80, server: 150.230.36.241, port: 80, type: vmess, uuid: f8983c8c-f2a0-4c06-ed60-61e6eb15bc02, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
   - {name: 🇺🇸 凤凰城80, server: 158.101.4.94, port: 80, type: vmess, uuid: de3b1f84-e8ce-4a4c-cac7-4b0a62f02c9f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
-
+  - {name: 腾讯云80, server: 101.34.250.164, port: 80, type: vmess, uuid: 7e7dcd4d-d0f7-4e0c-9f0f-89e7f3ec442e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
 proxy-groups:
   - name: "Global"
     type: select
