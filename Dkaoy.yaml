@@ -21,6 +21,30 @@ proxies:
 
 
 proxy-groups:
+
+  - name: Domestic
+    type: select
+    proxies:
+      - DIRECT
+      - 腾讯云->8080
+      - 阿里云->8080
+      - 腾讯云80
+      
+  - name: Foreign
+    type: select
+    proxies:
+      - 自动选择
+      - 甲骨文2号->8080
+      - 甲骨文2号
+      - 甲骨文1号->8080
+      - 甲骨文1号
+      - 🇺🇸 凤凰城->8080
+      - 🇺🇸 凤凰城2号arm->8080
+      - 🇺🇸 凤凰城2号arm
+      - 🇺🇸 凤凰城
+      - 甲骨文2号80
+      - 🇺🇸 凤凰城80
+
   - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -37,39 +61,13 @@ proxy-groups:
       - 甲骨文2号80
       - 🇺🇸 凤凰城80
       
-      
-  - name: Foreign
-    type: select
-    proxies:
-      - 自动选择
-      - 甲骨文2号->8080
-      - 甲骨文2号
-      - 甲骨文1号->8080
-      - 甲骨文1号
-      - 🇺🇸 凤凰城->8080
-      - 🇺🇸 凤凰城2号arm->8080
-      - 🇺🇸 凤凰城2号arm
-      - 🇺🇸 凤凰城
-      - 甲骨文2号80
-      - 🇺🇸 凤凰城80
-      
-      
   - name: 苹果微软服务
     type: select
     proxies:
       - Domestic
       - Foreign
       - DIRECT
-      
-  - name: Domestic
-    type: select
-    proxies:
-      - DIRECT
-      - 腾讯云->8080
-      - 阿里云->8080
-      - 腾讯云80
-      
-      
+            
   - name: 全球拦截
     type: select
     proxies:
@@ -77,8 +75,6 @@ proxy-groups:
       - DIRECT
       - Domestic
       - Foreign
-    
-      
       
   - name: 漏网之鱼
     type: select
