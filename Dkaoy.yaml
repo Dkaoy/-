@@ -7,7 +7,7 @@ external-controller: :9090
 proxies:
   - {name: 🇨🇳 北京5M->80, server: 39.105.121.159, port: 80, type: vmess, uuid: 143e15da-b411-4d70-fffa-23dc3170f269, alterId: 5, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
   - {name: 🇨🇳 北京8M->80, server: 101.34.250.164, port: 80, type: vmess, uuid: 7e7dcd4d-d0f7-4e0c-9f0f-89e7f3ec442e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
-  - {name: 圣何塞1号, server: 155.248.198.94, port: 1999, type: vmess, uuid: 48f0cf44-4e09-4207-e49b-fdd4bbd62e28, alterId: 100, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 圣何塞1号, server: 155.248.198.94, port: 1999, type: vmess, uuid: 48f0cf44-4e09-4207-e49b-fdd4bbd62e28, alterId: 100, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 🇺🇸 圣何塞2号80, server: 150.230.36.241, port: 80, type: vmess, uuid: f8983c8c-f2a0-4c06-ed60-61e6eb15bc02, alterId: 7, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
   - {name: 🇺🇸 圣何塞2号, server: 150.230.36.241, port: 1999, type: ss, cipher: aes-256-gcm, password: 9SGMTdc01rw3w2w}
   - {name: 🇺🇸 凤凰城, server: 158.101.4.94, port: 1999, type: ss, cipher: aes-256-gcm, password: V2DtjO331O4erf}
@@ -40,7 +40,7 @@ proxy-groups:
     type: select
     proxies:
       - 自动选择
-      - 圣何塞1号
+      - 🇺🇸 圣何塞1号
       - 🇺🇸 圣何塞2号80
       - 🇺🇸 圣何塞2号
       - 🇺🇸 凤凰城
@@ -57,7 +57,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 圣何塞1号
+      - 🇺🇸 圣何塞1号
       - 🇺🇸 圣何塞2号80
       - 🇺🇸 圣何塞2号
       - 🇺🇸 凤凰城
