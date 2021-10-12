@@ -1,0 +1,134 @@
+EL表达式
+	语法${表达式内容}
+
+	EL表达式获取数据
+		1获取基本数据类型数据
+		<%pageContext.setAttribute("num",10)%>
+		基本数据类型${num}<br>
+		
+		2获取自定义对象类型数据
+		学生姓名${stu.name}
+
+
+		3获取数组类型的数据
+		数组${arr[0]}
+
+		4获取list集合类型的数据
+		集合${list[0]}
+
+	
+		5获取Map集合类型的数据
+		第一个对象${map.hm01.name}
+
+EL表达式注意事项
+	1EL表达式没有空指针异常
+	2没有索引越界异常
+	3没有字符串的拼接
+	
+
+EL表达式运算符
+
+关系运算符
+	运算符		作用		示例		结果
+	==或eq		等于		${5==5}		true
+	!=或ne		不等于		${5!=5}		false
+	<或lt		小于		${3<5}		true
+	>或gt		大于		${3>5}		false
+	<=或le		小于等于		${3<=5}		true
+	>=或ge		大于等于		${3>=5}		false
+	
+逻辑运算符
+	&&或and		并且		${A&&B}		ture/false
+	||或or		或者		${A||B}		true/false
+	!或not		取反		${!A}		true/false
+
+其他运算符
+	empty		1判断对象是否为空2判断字符串是否为空字符串3判断容器元素是否为0	${empty str}
+	条件?表达式1:表达式2	三元运算符					${条件?表达式1:表达式2}
+
+EL表达式细节
+	获取四大域对象中的数据
+	pageContext.setAttribute("username","zhangsan")
+	request.setAttribute("username","zhangsan")
+	session.setAttribute("username","zhangsan")
+	application.setAttribute("username","zhangsan")
+
+
+
+	EL表达式隐私对象
+	隐式对象名称		队应jsp隐式对象		说明
+	pageContext		pageContext		功能完全相同
+	applicationScope					操作应用域对象数据
+	sessionScope					操作会话域对象数据
+	requestScope					操作请求域对象数据
+	pageScope					操作页面域对象数据
+	header						获取请求头数据
+	headerValues					获取请求头数据（多个值）
+	param						获取请求参数数据
+	paramValues					获取请求参数数据（多个值）
+	initParam						获取全局配置参数数据
+	cookie						获取cookie对象
+	
+
+JSTL（要使用JSTL，需要导入jstl的jar包）
+	jsp标准标签库
+	开发人员可以利用这些标签来取代jsp页面上的java代码，从而提高程序的可读性，降低程序的维护难度。
+
+
+	组成		作用		说明
+	core		核心标签库	通用的逻辑处理
+	fmt		国际化		不同地域显示不同语言
+	functions		EL函数		EL表达式可以使用的方法
+	sql		操作数据库
+	xml		操作xml
+
+	
+
+	JSTL核心标签库
+	标签名称		功能分类		属性		作用
+	<标签名:if>	流程控制		核心标签库	用于条件判断
+	<标签名:choose>
+	<标签名:when>	流程控制		核心标签库	用于多条件判断
+	<标签名:otherwise>
+	<标签名:forEach>	迭代遍历		核心标签库	用于循环遍历	items属性 var属性
+	
+<%@taglib uri="jar包位置" prefix="标签名"%>
+	${pageContext.setAttribute("score","A")}
+
+	<c:if text="${score eq 'A' }">优秀</c:if>
+
+
+		
+Filter 	过滤器
+	是一个接口，
+核心方法
+	返回值		方法名			作用
+	void		init(FilterConfig config)	初始化方法
+	void		doFilter(req,resp,FilterChain chain )	对请求资源和响应资源过滤
+	void		destory（）		销毁方法
+
+配置方式
+	注解方式
+	配置文件
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+		
