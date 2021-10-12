@@ -19,7 +19,17 @@ proxies:
   - {name: 🇸🇬 新加坡, server: 13.212.1.110, port: 1999, type: vmess, uuid: 5467403a-6a9c-491d-f81c-52ab94256623, alterId: 34, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 香港->80, server: 18.163.181.70, port: 80, type: vmess, uuid: 758f8b39-1410-4aed-d54b-b9d138f36b69, alterId: 74, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 18.163.181.70}, udp: true}
   - {name: 香港, server: 18.163.181.70, port: 1999, type: vmess, uuid: f1ea00d4-b03a-4c9e-d308-a8fc3bbae461, alterId: 164, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  
+  - {name: 流量站-白嫖2-香港aws-(端口80限制1ip), server: 18.162.114.3, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /802, ws-headers: {Host: pull.free.video.10010.com}, udp: true}
+  - {name: 流量站-白嫖3-香港aws-(端口80限制1ip), server: BP3.JKLIST.TK, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /802, ws-headers: {Host: pull.free.video.10010.com}, udp: true}
+  - {name: 流量站-香港1-AZ-WS浙停可用-(端口80), server: hk1.jklist.tk, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /JJkuv3, ws-headers: {Host: pull.free.video.10010.com}, udp: true}
+  - {name: 流量站-香港3-TCP-(端口80), server: hk3.jklist.tk, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 流量站-香港4-AZ-(端口80), server: hk4.jklist.tk, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: pull.free.video.10010.com}, udp: true}
+  - {name: 流量站-香港5-AZ-(端口80), server: hk5.jklist.tk, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: pull.free.video.10010.com}, udp: true}
+  - {name: 流量站-香港6-AZ-(端口80), server: hk6.jklist.tk, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: pull.free.video.10010.com}, udp: true}
+  - {name: 流量站-香港7-AZ-TCP-(端口80), server: hk7.jklist.tk, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 流量站-香港8-AZ-(端口80), server: hk8.jklist.tk, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /TS/recharge/tzUrl.html, ws-headers: {Host: pull.free.video.10010.com}, udp: true}
+  - {name: 流量站-国内-湖南长沙1000M-(端口80), server: 120.226.164.56, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /802, ws-headers: {Host: pull.free.video.10010.com}, udp: true}
+  - {name: 流量站-国内-浙江杭州200M-(端口80), server: 183.247.247.75, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /802, ws-headers: {Host: pull.free.video.10010.com}, udp: true}  
 
 
 
@@ -31,10 +41,22 @@ proxy-groups:
       - DIRECT
       - 🇨🇳 北京5M->80
       - 🇨🇳 北京8M->80
-      - aws香港->80     
+      - aws香港->80
       - aws香港
       - 香港->80 
       - 香港
+      - 流量站-白嫖2-香港aws-(端口80限制1ip)
+      - 流量站-白嫖3-香港aws-(端口80限制1ip)
+      - 流量站-香港1-AZ-WS浙停可用-(端口80)
+      - 流量站-香港3-TCP-(端口80)
+      - 流量站-香港4-AZ-(端口80)
+      - 流量站-香港5-AZ-(端口80)
+      - 流量站-香港6-AZ-(端口80)
+      - 流量站-香港7-AZ-TCP-(端口80)
+      - 流量站-香港8-AZ-(端口80)
+      - 流量站-国内-湖南长沙1000M-(端口80)
+      - 流量站-国内-浙江杭州200M-(端口80)
+
 
   - name: Foreign
     type: select
