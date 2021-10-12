@@ -31,8 +31,11 @@ proxy-groups:
       - DIRECT
       - 🇨🇳 北京5M->80
       - 🇨🇳 北京8M->80
+      - aws香港->80     
+      - aws香港
+      - 香港->80 
+      - 香港
 
-      
   - name: Foreign
     type: select
     proxies:
@@ -44,12 +47,9 @@ proxy-groups:
       - 🇺🇸 凤凰城80
       - 🇺🇸 凤凰城2号arm
       - 🇺🇸 凤凰城2号arm
-      - 🇯🇵 aws东京->80
-      - 🇯🇵 aws东京
       - 🇸🇬 新加坡80
       - 🇸🇬 新加坡
-      - 🇧🇷 圣保罗80
-      - 🇧🇷 圣保罗
+
       
       
   - name: 自动选择
@@ -64,12 +64,9 @@ proxy-groups:
       - 🇺🇸 凤凰城80
       - 🇺🇸 凤凰城2号arm
       - 🇺🇸 凤凰城2号arm
-      - 🇯🇵 aws东京->80
-      - 🇯🇵 aws东京
       - 🇸🇬 新加坡80
       - 🇸🇬 新加坡
-      - 🇧🇷 圣保罗80
-      - 🇧🇷 圣保罗
+
       
   - name: 苹果微软服务
     type: select
