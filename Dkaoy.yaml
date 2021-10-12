@@ -7,18 +7,21 @@ external-controller: :9090
 proxies:
   - {name: 🇨🇳 北京5M->80, server: 39.105.121.159, port: 80, type: vmess, uuid: 143e15da-b411-4d70-fffa-23dc3170f269, alterId: 5, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
   - {name: 🇨🇳 北京8M->80, server: 101.34.250.164, port: 80, type: vmess, uuid: 7e7dcd4d-d0f7-4e0c-9f0f-89e7f3ec442e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
-  - {name: 🇺🇸 圣何塞1号, server: 155.248.198.94, port: 1999, type: ss, cipher: chacha20-poly1305, password: 8kPkATBKoawwddgasec}
+  - {name: 圣何塞1号, server: 155.248.198.94, port: 1999, type: vmess, uuid: 48f0cf44-4e09-4207-e49b-fdd4bbd62e28, alterId: 100, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 🇺🇸 圣何塞2号80, server: 150.230.36.241, port: 80, type: vmess, uuid: f8983c8c-f2a0-4c06-ed60-61e6eb15bc02, alterId: 7, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
   - {name: 🇺🇸 圣何塞2号, server: 150.230.36.241, port: 1999, type: ss, cipher: aes-256-gcm, password: 9SGMTdc01rw3w2w}
   - {name: 🇺🇸 凤凰城, server: 158.101.4.94, port: 1999, type: ss, cipher: aes-256-gcm, password: V2DtjO331O4erf}
   - {name: 🇺🇸 凤凰城80, server: 158.101.4.94, port: 80, type: vmess, uuid: de3b1f84-e8ce-4a4c-cac7-4b0a62f02c9f, alterId: 71, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
   - {name: 🇺🇸 凤凰城2号arm, server: 129.146.28.230, port: 1999, type: ss, cipher: aes-256-gcm, password: prmZl9ZHSDdwd}
-  - {name: 🇯🇵 aws东京->80, server: 54.250.92.71, port: 80, type: vmess, uuid: 81db2bd2-7511-4f39-def6-afafe17e0fe2, alterId: 26, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
-  - {name: 🇯🇵 aws东京, server: 54.250.92.71, port: 1999, type: ss, cipher: aes-256-gcm, password: G82vuQU0rhfef4}
+  - {name: aws香港->80, server: 18.166.72.213, port: 80, type: vmess, uuid: 4ed11cf0-04b3-4a62-87e2-91f30e4580e0, alterId: 23, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 18.166.72.213}, udp: true}
+  - {name: aws香港, server: 18.166.72.213, port: 1999, type: vmess, uuid: b4e726c1-3324-4288-addb-b39d9fae04b2, alterId: 234, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 🇸🇬 新加坡80, server: 13.212.1.110, port: 80, type: vmess, uuid: bc417ace-4f04-4e77-c8dc-b86fa9f4863d, alterId: 23, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
   - {name: 🇸🇬 新加坡, server: 13.212.1.110, port: 1999, type: vmess, uuid: 5467403a-6a9c-491d-f81c-52ab94256623, alterId: 34, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇧🇷 圣保罗80, server: 54.207.178.130, port: 80, type: vmess, uuid: 20e78127-19c1-4fa8-e4b2-d109167421ea, alterId: 23, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
-  - {name: 🇧🇷 圣保罗, server: 54.207.178.130, port: 1999, type: vmess, uuid: 9dc4f8f9-288a-49d3-c4ae-383a6046d546, alterId: 45, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 香港->80, server: 18.163.181.70, port: 80, type: vmess, uuid: 758f8b39-1410-4aed-d54b-b9d138f36b69, alterId: 74, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 18.163.181.70}, udp: true}
+  - {name: 香港, server: 18.163.181.70, port: 1999, type: vmess, uuid: f1ea00d4-b03a-4c9e-d308-a8fc3bbae461, alterId: 164, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  
+
+
 
 proxy-groups:
 
