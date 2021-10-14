@@ -13,12 +13,6 @@ proxies:
   - {name: 🇺🇸 凤凰城, server: 158.101.4.94, port: 1999, type: ss, cipher: aes-256-gcm, password: V2DtjO331O4erf}
   - {name: 🇺🇸 凤凰城80, server: 158.101.4.94, port: 80, type: vmess, uuid: de3b1f84-e8ce-4a4c-cac7-4b0a62f02c9f, alterId: 71, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
   - {name: 🇺🇸 凤凰城2号arm, server: 129.146.28.230, port: 1999, type: ss, cipher: aes-256-gcm, password: prmZl9ZHSDdwd}
-  - {name: aws香港->80, server: 18.166.72.213, port: 80, type: vmess, uuid: 4ed11cf0-04b3-4a62-87e2-91f30e4580e0, alterId: 23, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 18.166.72.213}, udp: true}
-  - {name: aws香港, server: 18.166.72.213, port: 1999, type: vmess, uuid: b4e726c1-3324-4288-addb-b39d9fae04b2, alterId: 234, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 新加坡80, server: 13.212.1.110, port: 80, type: vmess, uuid: bc417ace-4f04-4e77-c8dc-b86fa9f4863d, alterId: 23, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pull.free.video.10010.com}}
-  - {name: 🇸🇬 新加坡, server: 13.212.1.110, port: 1999, type: vmess, uuid: 5467403a-6a9c-491d-f81c-52ab94256623, alterId: 34, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 香港->80, server: 18.163.181.70, port: 80, type: vmess, uuid: 758f8b39-1410-4aed-d54b-b9d138f36b69, alterId: 74, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 18.163.181.70}, udp: true}
-  - {name: 香港, server: 18.163.181.70, port: 1999, type: vmess, uuid: f1ea00d4-b03a-4c9e-d308-a8fc3bbae461, alterId: 164, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 流量站-白嫖2-香港aws-(端口80限制1ip), server: 18.162.114.3, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /802, ws-headers: {Host: pull.free.video.10010.com}, udp: true}
   - {name: 流量站-白嫖3-香港aws-(端口80限制1ip), server: BP3.JKLIST.TK, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /802, ws-headers: {Host: pull.free.video.10010.com}, udp: true}
   - {name: 流量站-香港1-AZ-WS浙停可用-(端口80), server: hk1.jklist.tk, port: 80, type: vmess, uuid: 6801e97d-dbb6-442e-98d3-6e2a05a8d939, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /JJkuv3, ws-headers: {Host: pull.free.video.10010.com}, udp: true}
@@ -41,10 +35,6 @@ proxy-groups:
       - DIRECT
       - 🇨🇳 北京5M->80
       - 🇨🇳 北京8M->80
-      - aws香港->80
-      - aws香港
-      - 香港->80 
-      - 香港
       - 流量站-白嫖2-香港aws-(端口80限制1ip)
       - 流量站-白嫖3-香港aws-(端口80限制1ip)
       - 流量站-香港1-AZ-WS浙停可用-(端口80)
@@ -68,8 +58,6 @@ proxy-groups:
       - 🇺🇸 凤凰城
       - 🇺🇸 凤凰城80
       - 🇺🇸 凤凰城2号arm
-      - 🇸🇬 新加坡80
-      - 🇸🇬 新加坡
 
       
       
@@ -84,10 +72,8 @@ proxy-groups:
       - 🇺🇸 凤凰城
       - 🇺🇸 凤凰城80
       - 🇺🇸 凤凰城2号arm
-      - 🇸🇬 新加坡80
-      - 🇸🇬 新加坡
 
-      
+
   - name: 苹果微软服务
     type: select
     proxies:
