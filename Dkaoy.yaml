@@ -34,7 +34,7 @@ proxies:
   - {name: 凤凰城2号arm, server: jiedian.ml, port: 1999, type: vmess, uuid: 19c1d08b-b5f6-47f0-ae9e-8343ce030c33, alterId: 34, cipher: auto, tls: true, skip-cert-verify: false}
   - {name: 北京8M->80, server: 101.34.250.164, port: 80, type: vmess, uuid: 7e7dcd4d-d0f7-4e0c-9f0f-89e7f3ec442e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /245, ws-headers: {Host: pull.free.video.10010.com}}
   - {name: 北京5M->80, server: 39.105.121.159, port: 80, type: vmess, uuid: 143e15da-b411-4d70-fffa-23dc3170f269, alterId: 5, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /452, ws-headers: {Host: pull.free.video.10010.com}}
-
+  - {name: 凤凰城起飞, server: a.gy.node.ucxw.org.ucs.cx, port: 25678, type: vmess, uuid: baff56b0-3b96-4a46-c098-89b1b711bc85, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
 
 proxy-groups:
 
@@ -79,7 +79,7 @@ proxy-groups:
       - 首尔2号
       - 圣何塞1号
       - 凤凰城2号arm
-
+      - 凤凰城起飞
 
 
   - name: 自动选择
@@ -101,7 +101,7 @@ proxy-groups:
       - 首尔2号
       - 圣何塞1号
       - 凤凰城2号arm
-
+      - 凤凰城起飞
 
   - name: 苹果微软服务
     type: select
