@@ -50,8 +50,6 @@ proxy-groups:
     proxies:
       - DIRECT
 
-
-
   - name: Foreign
     type: select
     proxies:
@@ -66,8 +64,6 @@ proxy-groups:
       - 首尔2号
       - 圣何塞1号
       - 凤凰城2号arm
-
-
 
   - name: 自动选择
     type: url-test
@@ -84,8 +80,6 @@ proxy-groups:
       - 首尔2号
       - 圣何塞1号
       - 凤凰城2号arm
-
-
 
 
   - name: 苹果微软服务
