@@ -32,7 +32,6 @@ proxy-groups:
     proxies:
       - DIRECT
       - cn1-80
-
 - name: Foreign
     type: select
     proxies:
