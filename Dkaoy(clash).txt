@@ -31,7 +31,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - TX-80
-- name: Foreign
+  - name: Foreign
     type: select
     proxies:
       - 自动选择
