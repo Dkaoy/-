@@ -15,7 +15,7 @@ proxies:
   - {name: Tok-amd-2, server: tok2.dkaoy.ml, port: 2096, type: vmess, uuid: f9372615-1616-4610-aa5e-c43b9a6b33fa, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: tok2.dkaoy.ml}}
   - {name: Ams-amd-1, server: ams1.dkaoy.ml, port: 2096, type: vmess, uuid: 2a7509ce-8d22-4569-c491-e98d92765b5c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: ams1.dkaoy.ml}}
   - {name: Ams-amd-2, server: ams2.dkaoy.ml, port: 2096, type: vmess, uuid: aa2d008f-4b7b-48f6-978d-4a4c25fa146d, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: ams2.dkaoy.ml}}
-  - {name: cn1-80, server: 101.34.250.164, port: 80, type: vmess, uuid: 1134791c-8640-4b6c-c3f9-76c10c42316e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: shoutingtoutiao3.10010.com}}
+  - {name: Cn-80, server: 101.34.250.164, port: 80, type: vmess, uuid: 1134791c-8640-4b6c-c3f9-76c10c42316e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: shoutingtoutiao3.10010.com}}
   - {name: San-amd-2->80, server: san2.dkaoy.ml, port: 80, type: vmess, uuid: b166781b-eada-4536-e3b1-7192b2eb5dfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: shoutingtoutiao3.10010.com}}
   - {name: Pho1-amd-1-80, server: pho1.dkaoy.ml, port: 80, type: vmess, uuid: 3bbed994-fc9e-4baf-b756-9a5a62213335, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: shoutingtoutiao3.10010.com}}
   - {name: Seo-amd-1-80, server: seo1.dkaoy.ml, port: 80, type: vmess, uuid: 2bfe038a-bae6-4d70-e979-67e344efc069, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: shoutingtoutiao3.10010.com}}
@@ -31,7 +31,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - cn1-80
+      - Cn-80
 - name: Foreign
     type: select
     proxies:
