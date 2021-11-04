@@ -105,17 +105,25 @@ Filter 	过滤器
 	返回值		方法名			作用
 	void		init(FilterConfig config)	初始化方法
 	void		doFilter(req,resp,FilterChain chain )	对请求资源和响应资源过滤
-	void		destory（）		销毁方法
+	void		destroy（）		销毁方法
 
 配置方式
 	注解方式
 	配置文件
 
+FilterChain
+	dofilter(request,respose)
 
 
+过滤器是过滤顺序为：在xml配置文件中映射的顺序
+
+过滤器声明周期：
 
 
+FilterConfig:
 
+
+过滤器五种拦截行为
 
 
 
