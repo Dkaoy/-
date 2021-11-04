@@ -16,6 +16,8 @@ proxies:
   - {name: 欧皇附体-东京-2-2096, server: tok2.dkaoy.xyz, port: 2096, type: vmess, uuid: 810ccebf-53b2-448d-c3d0-82300f2b52fb, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: tok2.dkaoy.xyz}}
   - {name: 北京-电信停机, server: 39.105.121.159, port: 80, type: vmess, uuid: a81b1100-3996-43fc-f2fd-4b6993007088, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /JJkuv3, ws-headers: {Host: a.189.cn}}
   - {name: 北京-联通手厅, server: 101.34.250.164, port: 80, type: vmess, uuid: 1134791c-8640-4b6c-c3f9-76c10c42316e, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
+  - {name: 欧皇附体-新加坡-80, server: sgp1.dkaoy.xyz, port: 80, type: vmess, uuid: 8ba8b2f9-99c1-44a9-fb66-c791878475d5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
+  - {name: 欧皇附体-新加坡, server: sgp1.dkaoy.xyz, port: 2096, type: vmess, uuid: 4c2e8da6-b62f-494c-f960-e8a33b4399a9, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: sgp1.dkaoy.xyz}}
 proxy-groups:
   - name: Domestic
     type: select
@@ -37,6 +39,8 @@ proxy-groups:
       - 欧皇附体-东京-1-2096
       - 欧皇附体-东京-2-80联通手厅
       - 欧皇附体-东京-2-2096
+      - 欧皇附体-新加坡-80
+      - 欧皇附体-新加坡
   - name: AdBlock
     type: select
     proxies:
@@ -68,6 +72,7 @@ proxy-groups:
       - 欧皇附体-旧金山-80联通手厅
       - 欧皇附体-圣何塞-2-80-联通手厅
       - 欧皇附体-东京-2-80联通手厅
+      - 欧皇附体-新加坡-80
 rules:
  - DOMAIN-SUFFIX,17gouwuba.com,AdBlock
  - DOMAIN-SUFFIX,186078.com,AdBlock
