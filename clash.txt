@@ -4,43 +4,38 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 欧皇附体-旧金山-80联通手厅, server: sfo1.dkaoy.xyz, port: 80, type: vmess, uuid: 4e64018e-8048-4044-acc6-dcde88064287, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
-  - {name: 欧皇附体-旧金山-443, server: sfo1.dkaoy.xyz, port: 443, type: vmess, uuid: 89c6e3ac-a27d-4d67-c3e5-fa44d56cb947, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: sfo1.dkaoy.xyz}}
-  - {name: 欧皇附体-圣何塞-amd-1-80-电信停机, server: san1.dkaoy.xyz, port: 80, type: vmess, uuid: 963a0e3d-3ae5-4fef-ed9d-7a47d60f599d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /JJkuv3, ws-headers: {Host: a.189.cn}}
-  - {name: 欧皇附体-圣何塞-amd-1-2096, server: san1.dkaoy.xyz, port: 2096, type: vmess, uuid: c40dd1c1-cd93-448c-a5d2-ae14216df5cd, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: san1.dkaoy.xyz}}
-  - {name: 欧皇附体-圣何塞-2-80-联通手厅, server: san2.dkaoy.xyz, port: 80, type: vmess, uuid: 210ede1c-abee-407e-93a3-31a445cd9867, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
-  - {name: 欧皇附体-圣何塞-2-2096, server: san2.dkaoy.xyz, port: 2096, type: vmess, uuid: f40489e0-39b9-4f90-a172-16088b1bafe4, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: san2.dkaoy.xyz}}
-  - {name: 欧皇附体-东京-1-80电信停机, server: tok1.dkaoy.xyz, port: 80, type: vmess, uuid: 5842a482-4a78-4a6f-ebf5-adc3db8c5a2a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /JJkuv3, ws-headers: {Host: a.189.cn}}
-  - {name: 欧皇附体-东京-1-2096, server: tok1.dkaoy.xyz, port: 2096, type: vmess, uuid: aa5f4c19-131b-4986-fb24-b6e2c35d08bc, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: tok1.dkaoy.xyz}}
+  - {name: 欧皇附体-东京-1-80联通, server: tok1.dkaoy.xyz, port: 80, type: vmess, uuid: 754d828b-8662-496a-d660-701eca99c178, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
+  - {name: 欧皇附体-东京-1-2096, server: tok1.dkaoy.xyz, port: 2096, type: vmess, uuid: 25ce583b-1cf7-447c-8cb9-9ee2c55d68ee, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
   - {name: 欧皇附体-东京-2-80联通手厅, server: tok2.dkaoy.xyz, port: 80, type: vmess, uuid: a48639a8-fb92-4ad5-b171-c28ea9d44834, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
-  - {name: 欧皇附体-东京-2-2096, server: tok2.dkaoy.xyz, port: 2096, type: vmess, uuid: 810ccebf-53b2-448d-c3d0-82300f2b52fb, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: tok2.dkaoy.xyz}}
-  - {name: 北京-电信停机, server: 39.105.121.159, port: 80, type: vmess, uuid: a81b1100-3996-43fc-f2fd-4b6993007088, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /JJkuv3, ws-headers: {Host: a.189.cn}}
+  - {name: 欧皇附体-东京-2-2096, server: tok2.dkaoy.xyz, port: 2096, type: vmess, uuid: 810ccebf-53b2-448d-c3d0-82300f2b52fb, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
+  - {name: 欧皇附体-新加坡-80, server: sgp1.dkaoy.xyz, port: 80, type: vmess, uuid: 8ba8b2f9-99c1-44a9-fb66-c791878475d5, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
+  - {name: 欧皇附体-新加坡-2096, server: sgp1.dkaoy.xyz, port: 2096, type: vmess, uuid: 4c2e8da6-b62f-494c-f960-e8a33b4399a9, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
+  - {name: 欧皇附体-圣何塞-amd-1-80-联通手厅, server: san1.dkaoy.xyz, port: 80, type: vmess, uuid: 963a0e3d-3ae5-4fef-ed9d-7a47d60f599d, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
+  - {name: 欧皇附体-圣何塞-amd-1-2096, server: san1.dkaoy.xyz, port: 2096, type: vmess, uuid: c40dd1c1-cd93-448c-a5d2-ae14216df5cd, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
+  - {name: 欧皇附体-圣何塞-2-80-联通手厅, server: san2.dkaoy.xyz, port: 80, type: vmess, uuid: 210ede1c-abee-407e-93a3-31a445cd9867, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
+  - {name: 欧皇附体-圣何塞-2-2096, server: san2.dkaoy.xyz, port: 2096, type: vmess, uuid: f40489e0-39b9-4f90-a172-16088b1bafe4, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
   - {name: 北京-联通手厅, server: 101.34.250.164, port: 80, type: vmess, uuid: 1134791c-8640-4b6c-c3f9-76c10c42316e, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
-  - {name: 欧皇附体-新加坡-80, server: sgp1.dkaoy.xyz, port: 80, type: vmess, uuid: 8ba8b2f9-99c1-44a9-fb66-c791878475d5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
-  - {name: 欧皇附体-新加坡, server: sgp1.dkaoy.xyz, port: 2096, type: vmess, uuid: 4c2e8da6-b62f-494c-f960-e8a33b4399a9, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: sgp1.dkaoy.xyz}}
+
 proxy-groups:
   - name: Domestic
     type: select
     proxies:
       - DIRECT
       - 北京-联通手厅
-      - 北京-电信停机
   - name: Foreign
     type: select
     proxies:
       - 自动选择80
-      - 欧皇附体-旧金山-80联通手厅
-      - 欧皇附体-旧金山-443
-      - 欧皇附体-圣何塞-amd-1-80-电信停机
-      - 欧皇附体-圣何塞-amd-1-2096
-      - 欧皇附体-圣何塞-2-80-联通手厅
       - 欧皇附体-圣何塞-2-2096
-      - 欧皇附体-东京-1-80电信停机
-      - 欧皇附体-东京-1-2096
-      - 欧皇附体-东京-2-80联通手厅
-      - 欧皇附体-东京-2-2096
+      - 欧皇附体-圣何塞-2-80-联通手厅
+      - 欧皇附体-圣何塞-amd-1-2096
+      - 欧皇附体-圣何塞-amd-1-80-联通手厅
+      - 欧皇附体-新加坡-2096
       - 欧皇附体-新加坡-80
-      - 欧皇附体-新加坡
+      - 欧皇附体-东京-2-2096
+      - 欧皇附体-东京-2-80联通手厅
+      - 欧皇附体-东京-1-2096
+      - 欧皇附体-东京-1-80联通
   - name: AdBlock
     type: select
     proxies:
@@ -64,15 +59,21 @@ proxy-groups:
       - Domestic
       - Foreign
       - DIRECT
-  - name: 自动选择80
+  - name: 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 欧皇附体-旧金山-80联通手厅
+      - 欧皇附体-圣何塞-2-2096
       - 欧皇附体-圣何塞-2-80-联通手厅
-      - 欧皇附体-东京-2-80联通手厅
+      - 欧皇附体-圣何塞-amd-1-2096
+      - 欧皇附体-圣何塞-amd-1-80-联通手厅
+      - 欧皇附体-新加坡-2096
       - 欧皇附体-新加坡-80
+      - 欧皇附体-东京-2-2096
+      - 欧皇附体-东京-2-80联通手厅
+      - 欧皇附体-东京-1-2096
+      - 欧皇附体-东京-1-80联通
 rules:
  - DOMAIN-SUFFIX,17gouwuba.com,AdBlock
  - DOMAIN-SUFFIX,186078.com,AdBlock
