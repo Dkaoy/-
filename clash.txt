@@ -25,7 +25,7 @@ proxy-groups:
   - name: Foreign
     type: select
     proxies:
-      - 自动选择80
+      - 自动选择
       - 欧皇附体-圣何塞-2-2096
       - 欧皇附体-圣何塞-2-80-联通手厅
       - 欧皇附体-圣何塞-amd-1-2096
