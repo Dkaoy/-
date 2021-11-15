@@ -4,13 +4,15 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 欧皇附体-圣何塞-amd-1-2096-端口转发, server: azure-hk-f4s-a.portforward.cloud.knayo.in, port: 20003, type: vmess, uuid: c40dd1c1-cd93-448c-a5d2-ae14216df5cd, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 欧皇附体-圣何塞-2-2096-端口转发, server: azure-hk-f4s-a.portforward.cloud.knayo.in, port: 20002, type: vmess, uuid: f40489e0-39b9-4f90-a172-16088b1bafe4, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 新加坡￥35-2096-端口转发, server: azure-hk-f4s-a.portforward.cloud.knayo.in, port: 20001, type: vmess, uuid: 8f18b0f7-3bb4-4bc8-a72c-cad752707504, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 新加坡自用-端口转发, server: azure-hk-f4s-a.portforward.cloud.knayo.in, port: 20000, type: vmess, uuid: 7ca07062-24e9-485d-9418-61191707871d, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /ddd, ws-headers: {Host: azure-hk-f4s-a.portforward.cloud.knayo.in}}
-  - {name: 欧皇附体-新加坡-2096-端口转发, server: azure-hk-f4s-a.portforward.cloud.knayo.in, port: 19999, type: vmess, uuid: 4c2e8da6-b62f-494c-f960-e8a33b4399a9, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 免费小鸡2-2096, server: "[2a01:4f8:13a:2690:face:2b7a:39e2:1]", port: 2096, type: vmess, uuid: e193e1b1-2f57-4ee4-e595-8622c68aa455, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: "[2a01:4f8:13a:2690:face:2b7a:39e2:1]"}}
-  - {name: 免费小鸡1-2096, server: "[2a01:4f8:13a:2690:face:20c1:185e:1]", port: 2096, type: vmess, uuid: ba5aa051-75ac-4017-9563-addc9cd236ac, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: "[2a01:4f8:13a:2690:face:20c1:185e:1]"}}
+  - {name: lucky_orac2, server: orac2.dkaoy.xyz, port: 2087, type: vmess, uuid: 77b4dbbf-8cab-44a5-8749-358b86aa53b7, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: orac2.dkaoy.xyz}}
+  - {name: lucky_orac1, server: orac1.dkaoy.xyz, port: 2087, type: vmess, uuid: 939b21f1-1e0a-43a8-b3fa-02e3d0f228e1, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: orac1.dkaoy.xyz}}
+  - {name: lucky_only2, server: only2.dkaoy.xyz, port: 2087, type: vmess, uuid: dcd56924-d3ad-443b-9aed-d60a3f3cea50, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: only2.dkaoy.xyz}}
+  - {name: lucky_only1, server: only1.dkaoy.xyz, port: 2087, type: vmess, uuid: dd525c2e-e0a6-425f-eb4a-5408fbe69f5c, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: only1.dkaoy.xyz}}
+  - {name: lucky_dkaoy2, server: lucky2.dkaoy.xyz, port: 2087, type: vmess, uuid: adee0910-1fcf-4206-ba12-43cbaa02ca60, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: lucky2.dkaoy.xyz}}
+  - {name: lucky_dkaoy1, server: lucky1.dkaoy.xyz, port: 2087, type: vmess, uuid: eab30db5-50cf-4d04-bc9e-73b117dd7dd5, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: lucky1.dkaoy.xyz}}
+  - {name: lucky_2124, server: kvm2.haxip.cf, port: 2087, type: vmess, uuid: ca447c69-6de4-4ad3-d9b7-80b62e361aee, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: kvm2.haxip.cf}}
+  - {name: lucky_2111, server: kvm1.haxip.cf, port: 2087, type: vmess, uuid: 9f570705-c5ce-4b07-dc01-3cfa179fb65f, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: kvm1.haxip.cf}}
+  - {name: lucky_2107, server: kvm3.haxip.cf, port: 2087, type: vmess, uuid: c97a540c-9cf6-48c2-ba36-e282d7f431c8, alterId: 116, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: kvm3.haxip.cf}}
   - {name: 北京-联通手厅, server: 101.34.250.164, port: 80, type: vmess, uuid: 1134791c-8640-4b6c-c3f9-76c10c42316e, alterId: 116, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /dkaoy, ws-headers: {Host: shoutingtoutiao3.10010.com}}
 
 proxy-groups:
@@ -23,13 +25,15 @@ proxy-groups:
     type: select
     proxies:
       - 自动选择
-      - 欧皇附体-圣何塞-amd-1-2096-端口转发
-      - 欧皇附体-圣何塞-2-2096-端口转发
-      - 新加坡￥35-2096-端口转发
-      - 新加坡自用-端口转发
-      - 欧皇附体-新加坡-2096-端口转发
-      - 免费小鸡2-2096
-      - 免费小鸡1-2096
+      - lucky_orac2
+      - lucky_orac1
+      - lucky_only2
+      - lucky_only1
+      - lucky_dkaoy2
+      - lucky_dkaoy1
+      - lucky_2124
+      - lucky_2111
+      - lucky_2107
   - name: AdBlock
     type: select
     proxies:
@@ -58,13 +62,15 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 欧皇附体-圣何塞-amd-1-2096-端口转发
-      - 欧皇附体-圣何塞-2-2096-端口转发
-      - 新加坡￥35-2096-端口转发
-      - 新加坡自用-端口转发
-      - 欧皇附体-新加坡-2096-端口转发
-      - 免费小鸡2-2096
-      - 免费小鸡1-2096
+      - lucky_orac2
+      - lucky_orac1
+      - lucky_only2
+      - lucky_only1
+      - lucky_dkaoy2
+      - lucky_dkaoy1
+      - lucky_2124
+      - lucky_2111
+      - lucky_2107
 
 rules:
  - DOMAIN-SUFFIX,17gouwuba.com,AdBlock
